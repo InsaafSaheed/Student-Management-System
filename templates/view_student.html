@@ -1,0 +1,20 @@
+<!-- templates/view_student.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>View Student</h1>
+    <p>ID: {{ student.id }}</p>
+    <p>First Name: {{ student.first_name }}</p>
+    <p>Last Name: {{ student.last_name }}</p>
+    <p>Date of Birth: {{ student.dob }}</p>
+    <p>Amount Due: {{ student.amount_due }}</p>
+    <a href="{{ url_for('index') }}">Back to Student List</a>
+</body>
+
+</html>

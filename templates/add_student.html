@@ -1,0 +1,30 @@
+<!-- templates/add_student.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add New Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Add New Student</h1>
+    <form method="post" action="{{ url_for('add_student') }}">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" required><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" required><br>
+
+        <label for="amount_due">Amount Due:</label>
+        <input type="number" name="amount_due" step="0.01" required><br>
+
+        <input type="submit" value="Add Student">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Student List</a>
+</body>
+
+</html>
